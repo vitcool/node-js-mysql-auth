@@ -4,14 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "env-cmd -f ./config/dev.env nodemon ./src/index.js",
-    "migrate": "sequelize db:migrate && sequelize db:seed:all"
+    "dev": "env-cmd -f ./config/dev.env nodemon ./src/index.js",
+    "migrate": "sequelize db:migrate && sequelize db:seed:all",
+    "down": "sequelize db:migrate:undo"
   },
   "author": "Vitalii Kulyk",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
+    "express-session": "^1.17.1",
     "mysql2": "^2.1.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
     "sequelize": "^5.21.8"
   },
   "devDependencies": {
